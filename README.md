@@ -1,2 +1,2 @@
 # test_MOFA
-repository with testing some functionality of MOFA https://biofam.github.io/MOFA2/
+performing some tests with MOFA https://biofam.github.io/MOFA2/
