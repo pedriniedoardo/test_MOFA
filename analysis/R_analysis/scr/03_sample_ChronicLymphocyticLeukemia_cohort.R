@@ -20,8 +20,8 @@ library(tidyverse)
 # utils::data("CLL_data")
 
 # save the object in local
-# saveRDS(CLL_data,file = "out/object/CLL_data.rds")
-CLL_data <- readRDS("out/object/CLL_data.rds")
+# saveRDS(CLL_data,file = "../../out/object/CLL_data.rds")
+CLL_data <- readRDS("../../out/object/CLL_data.rds")
 
 lapply(CLL_data,dim)
 
@@ -39,7 +39,7 @@ CLL_data$mRNA[1:10,1:10]
 # The full meta data can be obtained from the Bioconductor package BloodCancerMultiOmics2017 as data("patmeta").
 # CLL_metadata <- fread("ftp://ftp.ebi.ac.uk/pub/databases/mofa/cll_vignette/sample_metadata.txt")
 # write_tsv(CLL_metadata,file = "out/table/CLL_metadata.tsv")
-CLL_metadata <- read_tsv("out/table/CLL_metadata.tsv")
+CLL_metadata <- read_tsv("../../out/table/CLL_metadata.tsv")
 
 # 3Create the MOFA obejct and train the model -----------------------------
 # Create the MOFA object
@@ -95,14 +95,14 @@ MOFAobject <- prepare_mofa(MOFAobject,
 # Train the model: this should take ~2min
 
 # NOTE: The software has evolved since the original publication and the results will not be 100% identical to the original publication, please use the pretrained model if you are running through the vignette for the fist time
-MOFAobject <- run_mofa(MOFAobject, outfile="out/object/MOFA2_CLL.hdf5")
-# saveRDS(MOFAobject,"out/object/MOFA2_CLL.rds")
-# MOFAobject <- readRDS("out/object/MOFA2_CLL.rds")
+MOFAobject <- run_mofa(MOFAobject, outfile="../../out/object/MOFA2_CLL.hdf5")
+# saveRDS(MOFAobject,"../../out/object/MOFA2_CLL.rds")
+# MOFAobject <- readRDS("../../out/object/MOFA2_CLL.rds")
 
 # Load precomputed model
 # MOFAobject_precomputed <- readRDS(url("http://ftp.ebi.ac.uk/pub/databases/mofa/cll_vignette/MOFA2_CLL.rds"))
-# saveRDS(MOFAobject_precomputed,"out/object/MOFA2_CLL_precomputed.rds")
-MOFAobject <- readRDS("out/object/MOFA2_CLL_precomputed.rds")
+# saveRDS(MOFAobject_precomputed,"../../out/object/MOFA2_CLL_precomputed.rds")
+# MOFAobject <- readRDS("../../out/object/MOFA2_CLL_precomputed.rds")
 
 # 4Overview of the trained MOFA model -------------------------------------
 

@@ -14,7 +14,7 @@ library(MOFA2)
 
 # 3Load trained model -----------------------------------------------------
 # filepath <- system.file("extdata", "model.hdf5", package = "MOFA2")
-filepath <- "out/object/model.hdf5"
+filepath <- "../../out/object/model.hdf5"
 print(filepath)
 
 model <- load_model(filepath)

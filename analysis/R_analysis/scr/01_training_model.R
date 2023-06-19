@@ -111,7 +111,7 @@ MOFAobject <- prepare_mofa(
 )
 
 # Train the MOFA model
-outfile <- file.path(getwd(),"out/object/model.hdf5")
+outfile <- file.path(getwd(),"../../out/object/model.hdf5")
 MOFAobject.trained <- run_mofa(MOFAobject, outfile)
 
 # 6Downstream analysis ----------------------------------------------------
