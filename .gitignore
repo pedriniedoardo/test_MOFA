@@ -19,6 +19,7 @@ adapters/
 # R results – if you have custom R scripts 
 *.RData 
 *.rds 
+.Rhistory
 # Other repository to ignore  
 logs_slurm/ 
 logs/
